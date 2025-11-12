@@ -12,3 +12,15 @@ dependencies = [
 [tool.ruff]
 fix = true
 show-fixes = true
+
+[tool.pyright]
+# caminho onde o Pyright busca stubs adicionais
+stubPath = "typings"
+
+[tool.django-stubs]
+django_settings_module = "mysite.settings"
+
+[dependency-groups]
+dev = [
+    "django-stubs>=5.2.7",
+]
